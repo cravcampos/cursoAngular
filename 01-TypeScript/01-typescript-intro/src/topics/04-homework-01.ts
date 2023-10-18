@@ -3,6 +3,20 @@
 */
 // CRea una interface que solucione el error
 
+
+interface SuperHero {
+    name: string;
+    age: number;
+    address: Address;
+    showAdress: () => string;
+}
+
+interface Address {
+    street: string;
+    country: string;
+    city: string;
+}
+
 const superHeroe: SuperHero = {
     name: 'Spiderman',
     age: 30,
