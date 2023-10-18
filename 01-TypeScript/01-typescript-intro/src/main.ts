@@ -1,11 +1,11 @@
 import './style.css'
 
-import './topics/03-functions'
+import './topics/04-homework-01'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   Hola mundo
 `
 
-console.log("Victor Campos")
+console.log("Tarea 1")
 
 
