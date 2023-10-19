@@ -1,11 +1,11 @@
 import './style.css'
 
-import './topics/04-homework-01'
+import './topics/05-basic-destructuring'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   Hola mundo
 `
 
-console.log("Tarea 1")
+console.log("Desestructuracion de objetos")
 
 
