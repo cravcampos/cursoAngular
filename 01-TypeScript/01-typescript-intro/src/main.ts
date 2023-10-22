@@ -1,11 +1,11 @@
 import './style.css'
 
-import './topics/07-function-destructuring'
+import './topics/08-import-export'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   Hola mundo
 `
 
-console.log("Desestructuracion de funciones")
+console.log("Importaciones y exportaciones en TypeScript")
 
 

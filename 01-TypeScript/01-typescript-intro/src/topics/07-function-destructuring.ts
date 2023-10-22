@@ -1,5 +1,5 @@
 // Desestructuracion de funciones 
-interface Product {
+export interface Product {
     description: string;
     price: number;
 }
@@ -20,7 +20,7 @@ interface TaxCalculationOptions {
 }
 
 //function taxCalculation({tax, products}: TaxCalculationOptions): [number, number]{
-function taxCalculation(options: TaxCalculationOptions): [number, number] {
+export function taxCalculation(options: TaxCalculationOptions): [number, number] {
     const { tax, products } = options;
 
     let total = 0;
@@ -44,5 +44,3 @@ const [total, taxTotal] = taxCalculation({
 
 console.log('Total', total);
 console.log('Total', taxTotal);
-
-export { };
