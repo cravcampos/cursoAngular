@@ -1,5 +1,5 @@
 // Desestructuracion de funciones 
-interface Product{
+interface Product {
     description: string;
     price: number;
 }
@@ -19,28 +19,30 @@ interface TaxCalculationOptions {
     products: Product[];
 }
 
-function taxCalculation(options: TaxCalculationOptions): number[]{
+//function taxCalculation({tax, products}: TaxCalculationOptions): [number, number]{
+function taxCalculation(options: TaxCalculationOptions): [number, number] {
+    const { tax, products } = options;
 
-    let total = 0;  
+    let total = 0;
 
-    options.products.forEach(product => {
-        total += product.price;
+    products.forEach(({ price }) => {
+        total += price;
     });
-    return [total, total * options.tax];
+    return [total, total * tax];
 }
 
 
 
-const shoppingCar =[phone, tablet];
+const shoppingCar = [phone, tablet];
 const tax = 0.15;
 
 
-const result = taxCalculation({
+const [total, taxTotal] = taxCalculation({
     products: shoppingCar,
     tax: tax
 });
 
-console.log('Total', result[0]);
-console.log('Total', result[1]);
+console.log('Total', total);
+console.log('Total', taxTotal);
 
-export{};
+export { };
