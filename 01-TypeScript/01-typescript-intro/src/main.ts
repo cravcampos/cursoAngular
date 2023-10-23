@@ -1,11 +1,11 @@
 import './style.css'
 
-import './topics/11-decorators'
+import './topics/12-optional-chaining'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   Hola mundo
 `
 
-console.log("Decoradores en TypeScript")
+console.log("Encadenamiento opcional en TypeScript")
 
 
