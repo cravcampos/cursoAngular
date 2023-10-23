@@ -1,11 +1,11 @@
 import './style.css'
 
-import './topics/10-generics'
+import './topics/11-decorators'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   Hola mundo
 `
 
-console.log("Generics en TypeScript")
+console.log("Decoradores en TypeScript")
 
 
