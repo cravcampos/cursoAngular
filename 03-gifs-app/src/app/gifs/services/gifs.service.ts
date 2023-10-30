@@ -14,8 +14,24 @@ export class GifsService {
     return [...this._tagsHistory];
   }
 
-  searchTag(tag: string): void {
+  // Método que verifica si el tag buscado ya se encuentra en el historial, se limita a 10 el historial
+  private organizeHistory(tag: string){
+    tag = tag.toLowerCase();
+
+    if(this._tagsHistory.includes(tag)){
+      this._tagsHistory = this._tagsHistory.filter((oldTag) => oldTag !== tag)
+    }
+
     this._tagsHistory.unshift(tag);
-    console.log(this._tagsHistory);
+    this._tagsHistory = this.tagsHistory.splice(0,10);
+  }
+
+  searchTag(tag: string): void {
+
+    // validando que la búsqueda no este vacía
+    if (tag.length === 0) return;
+
+    // Usando método para organizar los tag y limitarlos a 10
+    this.organizeHistory(tag);
   }
 }
