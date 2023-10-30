@@ -6,6 +6,7 @@ import {Injectable} from '@angular/core';
 export class GifsService {
 
   private _tagsHistory: string[] = [];
+  private apiKey: string = 'lSekN7UXwIHfk3Ps1NoXVvaqoDnMIeOr';
 
   constructor() {
   }
@@ -19,7 +20,7 @@ export class GifsService {
     tag = tag.toLowerCase();
 
     if(this._tagsHistory.includes(tag)){
-      this._tagsHistory = this._tagsHistory.filter((oldTag) => oldTag !== tag)
+      this._tagsHistory = this._tagsHistory.filter((oldTag: string):boolean => oldTag !== tag)
     }
 
     this._tagsHistory.unshift(tag);
